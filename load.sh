@@ -7,12 +7,10 @@ wget http://lopaka.github.io/files/instructions/BCM43341B0.hcd -O /lib/firmware/
 cat >/etc/systemd/system/btattach.service <<EOL
 [Unit]
 Description=Btattach
-
 [Service]
 Type=simple
 ExecStart=/usr/bin/btattach --bredr /dev/ttyS1 -P bcm
 ExecStop=/usr/bin/killall btattach
-
 [Install]
 WantedBy=multi-user.target
 EOL
@@ -68,6 +66,12 @@ wget http://lopaka.github.io/files/instructions/chtrt5645.conf -O /usr/share/als
 
 # Install audio packages
 apt -y install pulseaudio alsa-base alsa-utils pavucontrol
+
+# Install usefull apps
+cd /home/oro/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome*.deb
+apt -y install mate-desktop-environment-extras
 
 # Reboot and use GUI to set default output - Sound Settings...
 shutdown -r now
