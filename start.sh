@@ -52,6 +52,21 @@ wget http://lopaka.github.io/files/instructions/chtrt5645.conf -O /usr/share/als
 # Install audio packages
 apt -y install pulseaudio alsa-base alsa-utils pavucontrol
 
+sudo apt-get update
+sudo apt-get install get-iplayer youtube-dl terminator
+cd /home/oro/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome*.deb
+apt-get -f install
+
+git clone https://github.com/get-iplayer/get_iplayer.git
+cd /home/oro/Desktop/get_iplayer
+chmod 777 get_iplayer
+./get_iplayer --prefs-add --output="/home/user/get_iplayer"
+
+cd /home/oro 
+git clone https://github.com/chessgriffin/mashpodder.git
+
 # Reboot and use GUI to set default output - Sound Settings...
 shutdown -r now
 
