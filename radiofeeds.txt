@@ -1,0 +1,24 @@
+radio x feeds
+ 
+
+Flash, admin based IceCast/Wowza switch
+      audioType: 'httpmp4m4a',
+      audioUrl: 'http://media-sov.musicradio.com/RadioXLondon?type=.flv'
+    },
+    {
+      // HTML5 IceCast AAC
+      audioType: 'http',
+      audioUrl: 'http://media-ice.musicradio.com/RadioXLondon'
+    },
+    {
+      // HTML5 IceCast MP3
+      audioType: 'http',
+      audioUrl: 'http://media-ice.musicradio.com/RadioXLondonMP3'
+    },
+    {
+      // HTML5 Wowza
+      audioType: 'http',
+      audioUrl: '/dynamic/ukrp/london/playlist2/'
+    }
+
+         https://stream-mz.planetradio.co.uk/magicmellow.mp3
